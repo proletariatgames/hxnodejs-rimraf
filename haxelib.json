@@ -5,9 +5,9 @@
   "classPath": "src",
   "tags": ["nodejs", "rimraf"],
   "description": "Externs for the rimraf NPM module",
-  "releasenote": "Initial release",
-  "version": "2.5.0-alpha",
-  "contributors": ["Proletariat", "lpetre", "danogles", "waneck"],
+  "releasenote": "Update to Haxe 4",
+  "version": "2.5.1",
+  "contributors": ["Proletariat", "ProletariatDev1"],
   "dependencies": {
     "hxnodejs": ""
   }

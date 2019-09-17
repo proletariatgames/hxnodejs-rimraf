@@ -1,6 +1,11 @@
 package js.npm;
 import js.node.Fs;
 import js.node.fs.Stats;
+#if haxe4
+import js.lib.Error;
+#else
+import js.Error;
+#end
 
 @:jsRequire('rimraf')
 extern class Rimraf {
@@ -18,11 +23,11 @@ extern class Rimraf {
       done for this. But in the async case, rimraf will gradually back off with timeouts up to opts.emfileWait ms, which
       defaults to 1000.
    **/
-  @:overload(function(path:String, callback:Null<js.Error>->Void):Void {})
-  @:selfCall public static function rimraf(path:String, options:RimrafOptions, callback:Null<js.Error>->Void):Void;
+  @:overload(function(path:String, callback:Null<Error>->Void):Void {})
+  @:selfCall public static function rimraf(path:String, options:RimrafOptions, callback:Null<Error>->Void):Void;
 
-  @:overload(function(path:String):Null<js.Error> {})
-  public static function sync(path:String, options:RimrafOptions):Null<js.Error>;
+  @:overload(function(path:String):Null<Error> {})
+  public static function sync(path:String, options:RimrafOptions):Null<Error>;
 }
 
 typedef RimrafOptions = {
